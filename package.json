@@ -16,7 +16,8 @@
       "prismjs": "project",
       "simple-icons": "github.com/schnerring/hugo-mod-json-resume",
       "typeface-fira-code": "project",
-      "typeface-roboto-slab": "project"
+      "typeface-noto-sans": "project",
+      "typeface-noto-serif": "project"
     },
     "devDependencies": {
       "@fullhuman/postcss-purgecss": "project",
@@ -48,7 +49,8 @@
     "prismjs": "^1.29.0",
     "simple-icons": "^12.2.0",
     "typeface-fira-code": "^1.1.13",
-    "typeface-roboto-slab": "^1.1.13"
+    "typeface-noto-sans": "^1.1.13",
+    "typeface-noto-serif": "^1.1.13"
   },
   "description": "A retro-looking Hugo theme inspired by gruvbox. The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes.",
   "devDependencies": {

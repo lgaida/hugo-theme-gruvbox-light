@@ -1,10 +1,10 @@
 baseURL = "http://localhost"
 copyright = "Copyright © 2021"
-title = "hugo-theme-gruvbox"
-#paginate = 10
+title = "hugo-theme-gruvbox-lighter"
+paginate = 10
 enableRobotsTXT = true
 # Enable to calculate the last modified date from Git history and show it in the post header
-#enableGitInfo = true
+enableGitInfo = true
 
 [build]
   noJSConfigInAssets = true

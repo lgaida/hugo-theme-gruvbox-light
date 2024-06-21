@@ -1,7 +1,8 @@
 :root {
-  --font-monospace: "Fira Code", "Lucida Console", Monaco, monospace;
-  --font-sans-serif: Verdana, Helvetica, sans-serif;
-  --font-serif: "Roboto Slab", Georgia, serif;
+  --font-monospace: "Fira Code", Monaco, monospace;
+  --font-sans-serif: "Noto Sans", -apple-system, system-ui, BlinkMacSystemFont,
+    "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
+  --font-serif: "Noto Serif", Georgia, serif;
 }
 
 html {
@@ -60,7 +61,7 @@ h4,
 h5,
 h6 {
   color: var(--fg0);
-  font-family: var(--font-monospace);
+  font-family: var(--font-sans-serif);
   font-weight: 300;
   line-height: 1.4;
 

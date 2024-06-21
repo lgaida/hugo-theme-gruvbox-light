@@ -5,7 +5,7 @@
 
 .pagination__button {
   color: var(--primary-alt);
-  font-family: var(--font-monospace);
+  font-family: var(--font-sans-serif);
   font-size: 1.125rem;
 }
 

@@ -1,0 +1,12 @@
+.big-bio {
+  h2 {
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+  }
+  h5 {
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+    border-bottom: none;
+    font-weight: 400;
+  }
+}

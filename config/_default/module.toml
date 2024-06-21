@@ -37,7 +37,10 @@
   source = "node_modules/typeface-fira-code/files"
   target = "static/fonts"
 [[mounts]]
-  source = "node_modules/typeface-roboto-slab/files"
+  source = "node_modules/typeface-noto-sans/files"
+  target = "static/fonts"
+[[mounts]]
+  source = "node_modules/typeface-noto-serif/files"
   target = "static/fonts"
 [[mounts]]
   source = "node_modules/@tabler/icons/icons"

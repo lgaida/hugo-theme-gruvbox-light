@@ -6,7 +6,8 @@
 /*! purgecss start ignore */
 
 /* Typefaces */
-@import "typeface-roboto-slab";
+@import "typeface-noto-serif";
+@import "typeface-noto-sans";
 @import "typeface-fira-code";
 
 /* Normalize */

@@ -1,8 +1,13 @@
 {{ define "main" }}
-  <article class="post">
-    <h1>{{ .Title | markdownify }}</h1>
-    <div class="post-content">
-      {{ .Content }}
+  <main>
+    <div class="content">
+      <article class="post">
+        <h1>{{ .Title | markdownify }}</h1>
+        <div class="post-content">
+          {{ .Content }}
+        </div>
+      </article>
     </div>
-  </article>
+    {{ partial "sidebar.html" . }}
+  </main>
 {{ end }}

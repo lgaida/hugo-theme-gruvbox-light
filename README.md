@@ -1,38 +1,8 @@
-# Gruvbox Hugo Theme
+# Gruvbox Hugo Theme (Light)
 
-A retro-looking [Hugo](https://gohugo.io/) theme inspired by
-[gruvbox](https://github.com/morhetz/gruvbox) to build secure, fast, and
-SEO-ready websites.
-
-This theme is easily customizable with features that any coder loves.
-
-I took a lot of inspiration from the
-[Hello Friend](https://github.com/panr/hugo-theme-hello-friend) and
-[Doks](https://github.com/h-enk/doks) Hugo themes.
-
-## DEMO [https://hugo-theme-gruvbox.schnerring.net/](https://hugo-theme-gruvbox.schnerring.net/)
-
-![Screenshot of the theme in dark and light colors](https://raw.githubusercontent.com/schnerring/hugo-theme-gruvbox/main/images/tn.png)
-
-## DISCLAIMER: Project Status
-
-This theme is still in early development.
-[Check out the issues](https://github.com/schnerring/hugo-theme-gruvbox/issues)
-to see what's still missing.
-
-## Highlights
-
-- [Code highlighting with Prism](#prism)
-- Full-text search with [Flex Search](https://github.com/nextapps-de/flexsearch)
-- Display your CV using structured [JSON Resume](https://jsonresume.org/) data
-- [Integrated image optimization with next-gen image formats and lazy loading](#image-optimization)
-- Dark mode that also changes Prism themes
-- [Dynamic color choices from the Gruvbox color palette](#colors)
-- [Extensible to make it suit your needs](#extensibility)
-- Responsive, mobile-first design
-- Beautiful SVG icons with [Tabler Icons](https://tabler-icons.io/)
-
-A big thank you to the authors of the software that make this theme possible! ❤️
+A fork of the retro-looking
+[hugo-theme-gruvbox](https://github.com/schnerring/hugo-theme-gruvbox), tweaked
+and stripped to my personal preferences.
 
 ## Quickstart
 
@@ -70,11 +40,9 @@ Add the following to the `config.toml` file:
   # Merge build config of the theme
   _merge = "deep"
 
-# This hopefully will be simpler in the future.
-# See: https://github.com/schnerring/hugo-theme-gruvbox/issues/16
 [module]
   [[module.imports]]
-    path = "github.com/schnerring/hugo-theme-gruvbox"
+    path = "github.com/lgaida/hugo-theme-gruvbox-light"
   [[module.imports]]
     path = "github.com/schnerring/hugo-mod-json-resume"
     [[module.imports.mounts]]
@@ -109,7 +77,10 @@ Add the following to the `config.toml` file:
     source = "node_modules/typeface-fira-code/files"
     target = "static/fonts"
   [[module.mounts]]
-    source = "node_modules/typeface-roboto-slab/files"
+    source = "node_modules/typeface-noto-sans/files"
+    target = "static/fonts"
+  [[module.mounts]]
+    source = "node_modules/typeface-noto-serif/files"
     target = "static/fonts"
   [[module.mounts]]
     source = "node_modules/@tabler/icons/icons"

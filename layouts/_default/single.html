@@ -1,20 +1,25 @@
 {{ define "main" }}
-  <article class="post">
-    <div class="post-header">
-      <h1>{{ .Title | markdownify }}</h1>
-      {{ partial "post-meta.html" (dict "page" . "pageIndex" 0) }}
-    </div>
+<main>
+  <div class="content">
+    <article class="post">
+      <div class="post-header">
+        <h1>{{ .Title | markdownify }}</h1>
+        {{ partial "post-meta.html" (dict "page" . "pageIndex" 0) }}
+      </div>
 
-    <div class="post-content">
-      {{ .Content }}
-    </div>
+      <div class="post-content">
+        {{ .Content }}
+      </div>
 
-    {{ if .Params.SocialShare }}
-      {{ partial "social-share.html" . }}
-    {{ end }}
+      {{ if .Params.SocialShare }}
+        {{ partial "social-share.html" . }}
+      {{ end }}
 
-    {{ if .Params.Comments }}
-      {{ partial "comments.html" . }}
-    {{ end }}
-  </article>
+      {{ if .Params.Comments }}
+        {{ partial "comments.html" . }}
+      {{ end }}
+    </article>
+  </div>
+  {{ partial "sidebar.html" . }}
+</main>
 {{ end }}

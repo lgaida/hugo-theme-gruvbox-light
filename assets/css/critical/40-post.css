@@ -15,7 +15,7 @@
 
 .post-header,
 .post-content__read-more {
-  font-family: var(--font-monospace);
+  font-family: var(--font-sans-serif);
 }
 
 .post-meta__author {

@@ -8,18 +8,18 @@
 
 :root[data-theme="light"] {
   --bg: var(--{{ $backgroundColor }});
-  --bg0: #fbf1c7;
-  --bg0_h: #f9f5d7;
-  --bg0_s: #f2e5bc;
-  --bg1: #ebdbb2;
-  --bg2: #d5c4a1;
-  --bg3: #bdae93;
-  --bg4: #a89984;
+  --bg0: #ffffff;
+  --bg0_h: #ffffff;
+  --bg0_s: #ffffff;
+  --bg1: #ececec;
+  --bg2: #dcdcdc;
+  --bg3: #cccccc;
+  --bg4: #bcbcbc;
   --fg: var(--fg1);
-  --fg0: #282828;
-  --fg1: #3c3836;
-  --fg2: #504945;
-  --fg3: #665c54;
+  --fg0: rgba(0, 0, 0, 0.84);
+  --fg1: rgba(0, 0, 0, 0.54);
+  --fg2: #504945; /* not used ?*/
+  --fg3: rgba(0, 0, 0, 0.4);
   --fg4: #7c6f64;
   --gray1: var(--fg4);
   --gray2: #928374;
@@ -29,8 +29,8 @@
   --green2: #797403;
   --yellow1: #d79921;
   --yellow2: #b57614;
-  --blue1: #458588;
-  --blue2: #076678;
+  --blue1: #3465a4;
+  --blue2: #0349a5;
   --purple1: #b16286;
   --purple2: #8f3f71;
   --aqua1: #689d6a;
