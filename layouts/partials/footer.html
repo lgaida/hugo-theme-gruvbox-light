@@ -4,8 +4,14 @@
       {{ . | safeHTML }}
     {{ end }}
   </div>
-  <!-- Extensibility -->
-  {{ partial "footer_end.html" . }}
+  {{ if $.Site.Menus.footer }}
+    <span>-</span>
+  {{ end }}
+  <div>
+    {{ range $.Site.Menus.footer }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+  </div>
 </footer>
 
 {{ $jsBuildOptions := dict "target" "es6" }}
@@ -26,3 +32,6 @@
 <script src="{{ $bundle.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $bundle.Data.Integrity }}"{{ end }}></script>
 <script src="{{ $flexsearch.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $flexsearch.Data.Integrity }}"{{ end }}></script>
 {{/* prettier-ignore-end */}}
+
+<!-- Extensibility -->
+{{ partial "footer_end.html" . }}
