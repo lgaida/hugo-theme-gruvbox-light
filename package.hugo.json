@@ -1,21 +1,20 @@
 {
-  "name": "hugo-theme-gruvbox",
+  "name": "hugo-theme-gruvbox-light",
   "version": "1.0.0",
-  "description": "A retro-looking Hugo theme inspired by gruvbox. The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes.",
+  "description": "A fork of the retro-looking hugo-theme-gruvbox.",
   "author": {
-    "name": "Michael Schnerring",
-    "email": "3743342+schnerring@users.noreply.github.com",
-    "url": "https://schnerring.net"
+    "name": "Lenard Gaida",
+    "url": "https://lgaida.net"
   },
   "license": "MIT",
   "main": "index.js",
-  "homepage": "https://github.com/schnerring/hugo-theme-gruvbox#readme",
+  "homepage": "https://github.com/lgaida/hugo-theme-gruvbox-light#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/schnerring/hugo-theme-gruvbox.git"
+    "url": "git+https://github.com/lgaida/hugo-theme-gruvbox-light.git"
   },
   "bugs": {
-    "url": "https://github.com/schnerring/hugo-theme-gruvbox/issues"
+    "url": "https://github.com/lgaida/hugo-theme-gruvbox-light/issues"
   },
   "keywords": ["hugo", "gruvbox", "theme"],
   "scripts": {
