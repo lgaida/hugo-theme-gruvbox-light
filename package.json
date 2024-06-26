@@ -54,7 +54,7 @@
   "description": "A fork of the retro-looking hugo-theme-gruvbox.",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^6.0.0",
-    "cssnano": "^7.0.2",
+    "cssnano": "^7.0.3",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
