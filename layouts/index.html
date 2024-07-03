@@ -1,87 +1,57 @@
 {{ define "main" }}
-  <div class="main">
-    <div class="content">
-      <div class="content-section">
-        {{ $cv := index $.Site.Data.json_resume $.Site.Language.Lang }}
-        {{ with $cv.basics }}
-          <div class="jr__item jr-basics__item big-bio">
-            {{ if .image }}
-              <div class="jr-basics__image jr-basics__image__bigger">
-                <img
-                  src="{{ .image }}"
-                  alt="Picture{{ with .name }} of {{ . }}{{ end }}"
-                />
-              </div>
-            {{ end }}
-
-            {{ with .name }}
-              <h2 >{{ . }}</h2>
-            {{ end }}
-        
-            {{ with .label }}
-              <h5 >{{ . }}</h3>
-            {{ end }}
-        
-            {{ with .email }}
-              <div class="jr-basics__email">{{ . }}</div>
-            {{ end }}
-        
-            {{ with .phone }}
-              <div class="jr-basics__phone">{{ . }}</div>
-            {{ end }}
-        
-            {{ with .url }}
-              <div class="jr-basics__url">
-                <a href="{{ . }}">{{ . }}</a>
-              </div>
-            {{ end }}
-        
-            {{ with .summary }}
-              <div class="jr-basics__summary">{{ . }}</div>
-            {{ end }}
-        
-            {{ with .location }}
-              {{ with .address }}
-                <div class="jr-basics__location-address">{{ . }}</div>
-              {{ end }}
-        
-              {{ with .postalCode }}
-                <div class="jr-basics__location-postalCode">{{ . }}</div>
-              {{ end }}
-        
-              {{ with .city }}
-                <div class="jr-basics__location-city">{{ . }}</div>
-              {{ end }}
-        
-              {{ with .countryCode }}
-                <div class="jr-basics__location-countryCode">{{ . }}</div>
-              {{ end }}
-        
-              {{ with .region }}
-                <div class="jr-basics__location-region">{{ . }}</div>
-              {{ end }}
-            {{ end }}
-        
-            {{ with where .profiles "username" "ne" nil }}
-              <hr />
-              <div class="jr-basics__profile jr-basics__profile--col">
-                {{ range . }}
-                  {{ partial "simple-icon.html" (dict "url" .url "network" .network "username" .username) }}
-                {{ end }}
-              </div>
-            {{ end }}
-        
-            {{ with where .profiles "username" "eq" nil }}
-              <hr />
-              <div class="jr-basics__profile jr-basics__profile--row">
-                {{ range . }}
-                  {{ partial "simple-icon.html" (dict "url" .url "network" .network "username" .username) }}
-                {{ end }}
-              </div>
-            {{ end }}
-          </div>
-        {{ end }}
-      </div>
+<main>
+  <div class="content">
+    <div class="content-section">
+      <h1>{{ .Title | markdownify }}</h1>
+      {{ with .Content }}
+      <div>{{ . }}</div>
+      {{ end }}
     </div>
   </div>
+  <div class="sidebar">
+    {{ $cv := index $.Site.Data.json_resume $.Site.Language.Lang }}
+    {{ with $cv.basics }}
+    <div class="jr__item jr-basics__item big-bio">
+      {{ if .image }}
+      <div class="jr-basics__image jr-basics__image__bigger">
+        <img
+          src="{{ .image }}"
+          alt="Picture{{ with .name }} of {{ . }}{{ end }}"
+        />
+      </div>
+      {{ end }}
+
+      {{ with .name }}
+      <div class="jr-basics__name" >{{ . }}</div>
+      {{ end }}
+
+      {{ with .label }}
+      <div class="jr-basics__label">{{ . }}</div>
+      {{ end }}
+
+      {{ with .email }}
+      <div class="jr-basics__email">{{ . }}</div>
+      {{ end }}
+
+      {{ with where .profiles "username" "ne" nil }}
+      <hr />
+      <div class="jr-basics__profile jr-basics__profile--col">
+        {{ range . }}
+        {{ partial "simple-icon.html" (dict "url" .url "network" .network "username" .username) }}
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{ with where .profiles "username" "eq" nil }}
+      <hr />
+      <div class="jr-basics__profile jr-basics__profile--row">
+        {{ range . }}
+        {{ partial "simple-icon.html" (dict "url" .url "network" .network "username" .username) }}
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</main>
 {{ end }}
