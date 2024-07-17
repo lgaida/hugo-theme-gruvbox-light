@@ -25,12 +25,18 @@
 
 {{ if hugo.IsProduction }}
   {{ $bundle = $bundle | fingerprint "sha512" }}
-  {{ $flexsearch = $flexsearch | fingerprint "sha512" }}
+  {{ if $.Site.Params.Flexsearch.Enable | default true }}
+    {{ $flexsearch = $flexsearch | fingerprint "sha512" }}
+  {{ end }}
 {{ end }}
 
 {{/* prettier-ignore-start */}}
 <script src="{{ $bundle.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $bundle.Data.Integrity }}"{{ end }}></script>
+
+{{ if $.Site.Params.Flexsearch.Enable | default true }}
 <script src="{{ $flexsearch.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $flexsearch.Data.Integrity }}"{{ end }}></script>
+{{ end }}
+
 {{/* prettier-ignore-end */}}
 
 <!-- Extensibility -->

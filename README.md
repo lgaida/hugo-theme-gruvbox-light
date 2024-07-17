@@ -140,6 +140,17 @@ Two options are available to configure the theme colors:
 - `themeContrast`: `soft`, `medium`, or `hard` (defaults to `medium`)  
   Theme background color
 
+## Flexsearch
+
+This theme ships with a searchfield in the navbar. It is enabled by default and
+can be disabled via config
+
+```toml
+[params]
+  [params.flexsearch]
+    enable = false
+```
+
 ## Prism
 
 The theme allows customization of [Prism](https://prismjs.com/) via

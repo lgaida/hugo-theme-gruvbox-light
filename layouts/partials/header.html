@@ -16,14 +16,16 @@
   </a>
 
   <div class="search">
-    <input
-      id="search__text"
-      type="search"
-      placeholder="Search..."
-      aria-label="Search"
-      autocomplete="off"
-    />
-    <div id="search__suggestions" class="search__suggestions--hidden"></div>
+    {{ if $.Site.Params.Flexsearch.Enable | default true }}
+      <input
+        id="search__text"
+        type="search"
+        placeholder="Search..."
+        aria-label="Search"
+        autocomplete="off"
+      />
+      <div id="search__suggestions" class="search__suggestions--hidden"></div>
+    {{ end }}
   </div>
 
   <nav id="menu">
@@ -34,22 +36,6 @@
         </li>
       {{ end }}
     </ul>
-
-    <div class="menu__burger">
-      <!-- Invisible checkbox indicating menu state -->
-      <input class="menu__item" type="checkbox" aria-label="Open main menu" />
-
-      {{ partial "icons/tabler-icon.html" "menu-2" }}
-
-
-      <ul class="menu--vertical">
-        {{ range $.Site.Menus.main }}
-          <li>
-            <a class="menu__item" href="{{ .URL }}">{{ .Name }}</a>
-          </li>
-        {{ end }}
-      </ul>
-    </div>
   </nav>
 
   <button class="theme__toggle light--hidden" aria-label="Toggle light mode">
