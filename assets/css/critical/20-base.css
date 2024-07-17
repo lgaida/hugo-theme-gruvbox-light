@@ -62,25 +62,12 @@ h5,
 h6 {
   color: var(--fg0);
   font-family: var(--font-sans-serif);
-  font-weight: 300;
+  font-weight: 700;
   line-height: 1.4;
 
   & code {
     font-size: 1em;
   }
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  border-bottom: 1px solid var(--bg1);
-}
-
-h1,
-h2 {
-  font-weight: 400;
 }
 
 h1 {
@@ -175,9 +162,12 @@ th {
 
 code,
 kbd,
-pre,
-th {
+pre {
   font-family: var(--font-monospace);
+}
+
+th {
+  font-family: var(--font-sans-serif);
 }
 
 code,

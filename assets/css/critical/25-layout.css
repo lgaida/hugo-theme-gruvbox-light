@@ -8,24 +8,16 @@
   height: 100vh;
 }
 
-div.main {
-  align-items: start;
-  display: grid;
-  grid-area: main;
-  grid-template-areas: "empty content empty2";
-  grid-template-columns: 1fr 2fr 1fr;
-}
-
 main {
   align-items: start;
   display: grid;
   grid-area: main;
   grid-template-areas: "empty content sidebar";
-  grid-template-columns: 1fr minmax(0, 850px) 3fr;
+  grid-template-columns: auto minmax(0, 850px) auto;
 }
 
 header {
-  background: var(--bg1);
+  border-bottom: 1px solid var(--bg1);
   grid-area: header;
 }
 

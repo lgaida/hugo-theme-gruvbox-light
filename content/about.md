@@ -1,6 +1,7 @@
 ---
 title: "About"
 draft: false
+readingTime: false
 ---
 
 ## Attributions

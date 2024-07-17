@@ -1,15 +1,27 @@
 <div class="post-meta">
-  {{- with .page.Date -}}
-    <span>{{ .Format "2006-01-02" }}</span>
-  {{- end -}}
-  {{- with .page.Params.Author -}}
-    <span> by </span><span class="post-meta__author">{{ . }}</span>
-  {{- end -}}
-  <!-- Don't show modified date when changed within the first 72 hours  -->
-  {{- $hours := (.page.Lastmod.Sub .page.Date).Hours -}}
-  {{- if and .page.Date .page.Lastmod (ge $hours 72) -}}
-    <span> (updated: {{ .page.Lastmod.Format "2006-01-02" }})</span>
-  {{- end -}}
+  <div class="post-meta__line">
+    <div>
+      {{- with .page.Date -}}
+        <span>{{ .Format "Jan 2, 2006" }}</span>
+      {{- end -}}
+      {{- with .page.Params.Author -}}
+        <span> by </span><span class="post-meta__author">{{ . }}</span>
+      {{- end -}}
+      <!-- Don't show modified date when changed within the first 72 hours  -->
+      {{- $hours := (.page.Lastmod.Sub .page.Date).Hours -}}
+      {{- if and .page.Date .page.Lastmod (ge $hours 72) -}}
+        <span> (updated: {{ .page.Lastmod.Format "Jan 2, 2006" }})</span>
+      {{- end -}}
+    </div>
+    {{ if .page.Params.readingTime | default true }}
+      <div>
+        <span>·</span>
+      </div>
+      <div>
+        <span>{{ .page.ReadingTime }} min read</span>
+      </div>
+    {{ end }}
+  </div>
   {{ with .page.Params.tags }}
     <div class="post-tags">
       {{ range . -}}

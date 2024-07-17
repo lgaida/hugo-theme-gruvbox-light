@@ -1,6 +1,7 @@
 ---
 title: "Richard Hendricks"
 draft: false
+readingTime: false
 ---
 
 ## Profile

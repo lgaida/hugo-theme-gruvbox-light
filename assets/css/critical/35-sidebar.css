@@ -16,6 +16,7 @@
 
 .sidebar__heading {
   font-size: 1.3rem;
+  margin: 0.5rem 0;
 }
 
 aside.toc {
@@ -49,8 +50,8 @@ aside.toc {
 }
 
 .jr-basics__image {
-  background: var(--bg1);
-  border: 2px solid var(--bg2);
+  /* background: var(--bg1);
+  border: 2px solid var(--bg2); */
 }
 
 .jr-basics__summary {

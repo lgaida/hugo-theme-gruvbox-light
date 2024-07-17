@@ -11,16 +11,19 @@
   --bg0: #ffffff;
   --bg0_h: #ffffff;
   --bg0_s: #ffffff;
-  --bg1: #ececec;
-  --bg2: #dcdcdc;
-  --bg3: #cccccc;
-  --bg4: #bcbcbc;
-  --fg: var(--fg1);
-  --fg0: rgba(0, 0, 0, 0.84);
-  --fg1: rgba(0, 0, 0, 0.54);
-  --fg2: #504945; /* not used ?*/
-  --fg3: rgba(0, 0, 0, 0.4);
+  --bg1: #f2f2f2;
+  --bg2: rgb(242, 242, 242);
+  --bg3: rgb(228, 228, 228);
+  --bg4: rgb(212, 212, 212);
+  --fg: var(--fg0);
+  --fg0: var(--dark-dark);
+  --fg1: var(--dark-light);
+  --fg3: var(--dark-light);
   --fg4: #7c6f64;
+  --dark-light: rgba(0,0,0,0.58);
+  --dark-mid: rgb(0,0,0,0.8); 
+  --dark-dark: rgba(0,0,0,0.86);
+
   --gray1: var(--fg4);
   --gray2: #928374;
   --red1: #cc241d;
