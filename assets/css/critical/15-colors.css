@@ -15,13 +15,13 @@
   --bg2: rgb(242, 242, 242);
   --bg3: rgb(228, 228, 228);
   --bg4: rgb(212, 212, 212);
-  --fg: var(--fg0);
+  --fg: var(--fg1);
   --fg0: var(--dark-dark);
-  --fg1: var(--dark-light);
+  --fg1: var(--dark-mid);
   --fg3: var(--dark-light);
   --fg4: #7c6f64;
   --dark-light: rgba(0,0,0,0.58);
-  --dark-mid: rgb(0,0,0,0.8); 
+  --dark-mid: rgb(0,0,0,0.7); 
   --dark-dark: rgba(0,0,0,0.86);
 
   --gray1: var(--fg4);

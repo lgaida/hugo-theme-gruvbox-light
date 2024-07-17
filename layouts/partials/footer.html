@@ -7,7 +7,7 @@
   {{ if $.Site.Menus.footer }}
     <span>-</span>
   {{ end }}
-  <div>
+  <div style="display: flex; gap:1rem;">
     {{ range $.Site.Menus.footer }}
       <a href="{{ .URL }}">{{ .Name }}</a>
     {{ end }}

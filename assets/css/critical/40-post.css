@@ -33,7 +33,7 @@
 }
 
 .post-meta {
-  color: var(--fg1);
+  color: var(--fg3);
 }
 
 .post-meta__author {
@@ -54,6 +54,7 @@
 }
 
 .post-content {
+  font-family: var(--font-serif);
   margin: 1rem 0;
 }
 
